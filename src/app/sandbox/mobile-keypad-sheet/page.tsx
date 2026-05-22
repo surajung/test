@@ -9,11 +9,11 @@ export default function MobileKeypadSheetPage() {
     <main className="tile-parchment min-h-[100dvh]">
       <section className="mx-auto w-full max-w-2xl px-4 pb-32 pt-8 sm:px-6">
         <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          Mobile Bottom Sheet Keypad Test
+          모바일 바텀시트 키패드 테스트
         </h2>
         <p className="mt-3 text-zinc-700">
-          Open the bottom sheet, focus numeric input, and verify input plus CTA
-          positioning when the keyboard appears.
+          하단 버튼으로 바텀시트를 열고 숫자 인풋에 포커스하세요. 키패드가
+          올라왔을 때 인풋과 CTA 위치를 확인하는 테스트입니다.
         </p>
 
         <div className="mt-8 space-y-4">
@@ -22,10 +22,9 @@ export default function MobileKeypadSheetPage() {
               key={idx}
               className="rounded-2xl border border-zinc-200 bg-white p-4"
             >
-              <h3 className="text-base font-semibold">Dummy Content {idx + 1}</h3>
+              <h3 className="text-base font-semibold">더미 컨텐츠 {idx + 1}</h3>
               <p className="mt-1 text-sm text-zinc-600">
-                Repeated blocks create scroll depth for viewport and keyboard
-                behavior testing.
+                뷰포트 및 키패드 동작 테스트를 위한 반복 컨텐츠입니다.
               </p>
             </article>
           ))}
@@ -38,7 +37,7 @@ export default function MobileKeypadSheetPage() {
             onClick={() => setOpen(true)}
             className="h-12 w-full rounded-full bg-[var(--primary)] text-base font-medium text-white hover:bg-[var(--primary-focus)]"
           >
-            Open Bottom Sheet
+            바텀시트 열기
           </button>
         </div>
       </div>
@@ -51,23 +50,23 @@ export default function MobileKeypadSheetPage() {
           >
             <div className="mx-auto w-full max-w-2xl">
               <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-zinc-300" />
-              <h3 className="text-lg font-semibold text-zinc-900">Bottom Sheet Form</h3>
+              <h3 className="text-lg font-semibold text-zinc-900">바텀시트 폼</h3>
               <p className="mt-1 text-sm text-zinc-600">
-                Focus the numeric input to test keyboard overlap behavior.
+                숫자 인풋에 포커스해 키패드 겹침 여부를 확인하세요.
               </p>
 
               <label className="mt-4 block text-sm font-medium text-zinc-700">
-                Numeric Input
+                숫자 입력
               </label>
               <input
                 type="number"
                 inputMode="numeric"
-                placeholder="Enter number"
+                placeholder="숫자를 입력하세요"
                 className="mt-2 h-12 w-full rounded-full border border-zinc-300 px-4 text-base"
               />
 
               <button className="mt-4 h-12 w-full rounded-full bg-[var(--primary)] text-base font-medium text-white hover:bg-[var(--primary-focus)]">
-                Continue
+                계속
               </button>
             </div>
           </div>

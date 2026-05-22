@@ -1,7 +1,7 @@
 const cards = [
-  { label: "전체 사용자", value: "1,024명" },
-  { label: "오늘 요청 수", value: "8,441건" },
-  { label: "오류율", value: "0.12%" },
+  { label: "총 사용자", value: "1,024" },
+  { label: "오늘 요청 수", value: "8,441" },
+  { label: "에러율", value: "0.12%" },
 ];
 
 export default function DashboardPage() {
@@ -12,7 +12,7 @@ export default function DashboardPage() {
           대시보드
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-center text-lg leading-8 text-zinc-700 sm:text-2xl">
-          외부 렌더링과 지연 시간 확인을 위한 정적 모니터링 화면입니다.
+          외부 렌더링과 응답 지연 확인을 위한 정적 모니터링 화면입니다.
         </p>
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
           {cards.map((card, idx) => (

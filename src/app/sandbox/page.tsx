@@ -3,15 +3,13 @@ import Link from "next/link";
 const sandboxLinks = [
   {
     href: "/sandbox/mobile-keypad",
-    title: "Mobile Keypad Test",
-    description:
-      "Focus numeric input and verify input/CTA position while mobile keyboard is visible.",
+    title: "모바일 키패드 테스트",
+    description: "숫자 인풋 포커스 시 키패드와 CTA 위치를 확인합니다.",
   },
   {
     href: "/sandbox/mobile-keypad-sheet",
-    title: "Mobile Bottom Sheet Keypad Test",
-    description:
-      "Open bottom sheet and verify numeric input/CTA position with keyboard.",
+    title: "바텀시트 키패드 테스트",
+    description: "바텀시트 내부 숫자 인풋/CTA 위치를 확인합니다.",
   },
 ];
 
@@ -20,10 +18,10 @@ export default function SandboxHomePage() {
     <main className="apple-tile tile-light">
       <section className="mx-auto w-full max-w-5xl">
         <h2 className="text-center text-4xl font-semibold tracking-tight sm:text-5xl">
-          Sandbox Home
+          샌드박스 홈
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-center text-lg leading-8 text-zinc-700 sm:text-2xl">
-          Test-only pages are listed here.
+          테스트 전용 페이지 목록입니다.
         </p>
 
         <div className="mt-10 grid gap-4">
@@ -35,7 +33,7 @@ export default function SandboxHomePage() {
             >
               <h3 className="text-xl font-semibold text-zinc-900">{item.title}</h3>
               <p className="mt-2 text-zinc-600">{item.description}</p>
-              <p className="mt-3 text-sm text-[var(--primary)]">Open {item.href}</p>
+              <p className="mt-3 text-sm text-[var(--primary)]">열기 {item.href}</p>
             </Link>
           ))}
         </div>
