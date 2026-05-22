@@ -59,8 +59,15 @@ export default function MobileKeypadSheetPage() {
                 숫자 입력
               </label>
               <input
-                type="number"
+                type="text"
                 inputMode="numeric"
+                pattern="[0-9]*"
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck={false}
+                enterKeyHint="done"
+                name="sandbox_sheet_numeric_input"
                 placeholder="숫자를 입력하세요"
                 className="mt-2 h-12 w-full rounded-full border border-zinc-300 px-4 text-base"
               />
