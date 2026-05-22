@@ -1,0 +1,12 @@
+services:
+  test-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: test-surajung-web
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      BASIC_AUTH_USER: ${BASIC_AUTH_USER}
+      BASIC_AUTH_PASSWORD: ${BASIC_AUTH_PASSWORD}
