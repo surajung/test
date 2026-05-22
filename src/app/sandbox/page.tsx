@@ -7,6 +7,12 @@ const sandboxLinks = [
     description:
       "Focus numeric input and verify input/CTA position while mobile keyboard is visible.",
   },
+  {
+    href: "/sandbox/mobile-keypad-sheet",
+    title: "Mobile Bottom Sheet Keypad Test",
+    description:
+      "Open bottom sheet and verify numeric input/CTA position with keyboard.",
+  },
 ];
 
 export default function SandboxHomePage() {
