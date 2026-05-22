@@ -3,7 +3,7 @@
 External verification site for `test.surajung.com`.
 Recommended operation model is Docker + existing cloudflared tunnel container.
 
-## 1) Run with Docker
+## 1) First run
 
 Create `.env` file in project root:
 
@@ -12,10 +12,10 @@ BASIC_AUTH_USER=admin
 BASIC_AUTH_PASSWORD=your-strong-password
 ```
 
-Build and run:
+Initial deploy:
 
 ```bash
-docker compose up -d --build
+npm run deploy:local
 ```
 
 Check local access:
@@ -24,7 +24,22 @@ Check local access:
 curl -I http://127.0.0.1:3000
 ```
 
-## 2) Endpoints
+## 2) Manual deploy flow
+
+After code changes:
+
+```bash
+git pull
+npm run deploy:local
+```
+
+Optional logs:
+
+```bash
+npm run deploy:logs
+```
+
+## 3) Endpoints
 
 - `GET /api/health`
 - `POST /api/mock/login`
@@ -39,7 +54,7 @@ Example login payload:
 }
 ```
 
-## 3) Connect to existing cloudflared container
+## 4) Connect to existing cloudflared container
 
 If your cloudflared is already running in Docker (for example `biseo-cloudflared`), add one hostname rule:
 
@@ -57,7 +72,7 @@ If your cloudflared uses config file ingress, add:
 
 Then reload/restart only cloudflared container.
 
-## 4) Notes
+## 5) Notes
 
 - Basic Auth is enforced by `middleware.ts` when env vars are set.
 - If auth env vars are empty, auth is bypassed.

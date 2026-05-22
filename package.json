@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy:local": "docker-compose up -d --build",
+    "deploy:logs": "docker-compose logs -f --tail=100 test-web"
   },
   "dependencies": {
     "next": "16.2.6",
