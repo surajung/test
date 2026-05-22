@@ -1,19 +1,50 @@
+const tiles = [
+  {
+    title: "External Test Landing",
+    body: "A photography-first verification surface for checking domain routing, authentication prompts, and endpoint reliability.",
+    kind: "tile-light",
+  },
+  {
+    title: "Health Endpoint",
+    body: "Use /api/health to confirm tunnel status and backend reachability from external networks.",
+    kind: "tile-parchment",
+  },
+  {
+    title: "Mock Flows",
+    body: "Login and order APIs are available to validate request handling from clients and QA tools.",
+    kind: "tile-dark",
+  },
+];
+
 export default function Home() {
   return (
-    <section className="space-y-4">
-      <h2 className="text-3xl font-bold">External Test Landing</h2>
-      <p className="text-zinc-700">
-        This page is used to verify external access, DNS routing, and simple UI
-        rendering from outside network.
-      </p>
-      <div className="rounded-lg border border-zinc-200 bg-white p-5">
-        <h3 className="font-semibold">Verification Checklist</h3>
-        <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-700">
-          <li>Domain: test.surajung.com</li>
-          <li>Status endpoint: /api/health</li>
-          <li>Mock login API: /api/mock/login</li>
-        </ul>
-      </div>
-    </section>
+    <main>
+      {tiles.map((tile) => (
+        <section key={tile.title} className={`apple-tile ${tile.kind}`}>
+          <div className="mx-auto w-full max-w-6xl text-center">
+            <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+              {tile.title}
+            </h2>
+            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 opacity-90 sm:text-2xl sm:leading-10">
+              {tile.body}
+            </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="/api/health"
+                className={`apple-pill text-base ${tile.kind === "tile-dark" ? "apple-link-dark" : "apple-link"}`}
+              >
+                Health API
+              </a>
+              <a
+                href="/orders"
+                className={`apple-pill text-base ${tile.kind === "tile-dark" ? "apple-link-dark" : "apple-link"}`}
+              >
+                View Orders
+              </a>
+            </div>
+          </div>
+        </section>
+      ))}
+    </main>
   );
 }

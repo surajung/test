@@ -14,9 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full bg-zinc-50 text-zinc-900">
+      <body className="apple-shell min-h-full">
         <Nav />
-        <main className="mx-auto w-full max-w-5xl px-6 py-8">{children}</main>
+        {children}
       </body>
     </html>
   );

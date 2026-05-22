@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const links = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "Store" },
   { href: "/login", label: "Login" },
   { href: "/dashboard", label: "Dashboard" },
   { href: "/orders", label: "Orders" },
@@ -10,15 +10,15 @@ const links = [
 
 export function Nav() {
   return (
-    <header className="border-b border-zinc-200 bg-white">
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4">
-        <h1 className="text-lg font-semibold text-zinc-900">test.surajung.com</h1>
-        <nav className="flex flex-wrap gap-3 text-sm">
+    <header className="sticky top-0 z-20 border-b border-zinc-800 bg-black text-white">
+      <div className="mx-auto flex h-11 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
+        <span className="text-xs tracking-tight">test.surajung.com</span>
+        <nav className="flex items-center gap-3 overflow-x-auto text-xs sm:gap-4">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-md border border-zinc-300 px-3 py-1.5 text-zinc-700 transition hover:bg-zinc-100"
+              className="whitespace-nowrap text-zinc-200 transition hover:text-white"
             >
               {link.label}
             </Link>

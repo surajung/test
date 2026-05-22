@@ -6,29 +6,35 @@ const rows = [
 
 export default function OrdersPage() {
   return (
-    <section className="space-y-4">
-      <h2 className="text-2xl font-bold">Dummy Orders</h2>
-      <p className="text-zinc-700">Simple table for API/UI connection tests.</p>
-      <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white">
-        <table className="w-full text-left text-sm">
-          <thead className="bg-zinc-100 text-zinc-700">
-            <tr>
-              <th className="px-4 py-3">Order ID</th>
-              <th className="px-4 py-3">Status</th>
-              <th className="px-4 py-3">Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row) => (
-              <tr key={row.id} className="border-t border-zinc-200">
-                <td className="px-4 py-3">{row.id}</td>
-                <td className="px-4 py-3">{row.status}</td>
-                <td className="px-4 py-3">{row.amount}</td>
+    <main className="apple-tile tile-dark">
+      <section className="mx-auto w-full max-w-6xl">
+        <h2 className="text-center text-4xl font-semibold tracking-tight sm:text-5xl">
+          Orders
+        </h2>
+        <p className="mx-auto mt-4 max-w-3xl text-center text-lg leading-8 text-zinc-200 sm:text-2xl">
+          Mock order stream used to validate table rendering and API handshake.
+        </p>
+        <div className="mt-10 overflow-x-auto rounded-3xl border border-zinc-700 bg-zinc-900">
+          <table className="min-w-[560px] w-full text-left text-sm text-zinc-100">
+            <thead className="border-b border-zinc-700 text-zinc-300">
+              <tr>
+                <th className="px-5 py-4 font-medium">Order ID</th>
+                <th className="px-5 py-4 font-medium">Status</th>
+                <th className="px-5 py-4 font-medium">Amount</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </section>
+            </thead>
+            <tbody>
+              {rows.map((row) => (
+                <tr key={row.id} className="border-t border-zinc-800">
+                  <td className="px-5 py-4">{row.id}</td>
+                  <td className="px-5 py-4">{row.status}</td>
+                  <td className="px-5 py-4">{row.amount}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
   );
 }

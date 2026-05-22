@@ -1,26 +1,30 @@
 export default function LoginPage() {
   return (
-    <section className="space-y-4">
-      <h2 className="text-2xl font-bold">Dummy Login</h2>
-      <p className="text-zinc-700">UI only page for external visual checks.</p>
-      <form className="grid max-w-md gap-3 rounded-lg border border-zinc-200 bg-white p-5">
-        <input
-          className="rounded-md border border-zinc-300 px-3 py-2"
-          type="email"
-          placeholder="demo@surajung.com"
-        />
-        <input
-          className="rounded-md border border-zinc-300 px-3 py-2"
-          type="password"
-          placeholder="********"
-        />
-        <button
-          type="button"
-          className="rounded-md bg-zinc-900 px-4 py-2 text-white"
-        >
-          Sign In
-        </button>
-      </form>
-    </section>
+    <main className="apple-tile tile-parchment">
+      <section className="mx-auto w-full max-w-2xl text-center">
+        <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">Sign in</h2>
+        <p className="mt-4 text-lg leading-8 text-zinc-700 sm:text-2xl">
+          Dummy access screen for external UI and auth prompt checks.
+        </p>
+        <form className="mx-auto mt-10 grid w-full max-w-md gap-3 rounded-2xl border border-[var(--hairline)] bg-white p-5 text-left sm:p-6">
+          <input
+            className="h-11 rounded-full border border-zinc-300 px-4"
+            type="email"
+            placeholder="demo@surajung.com"
+          />
+          <input
+            className="h-11 rounded-full border border-zinc-300 px-4"
+            type="password"
+            placeholder="password123"
+          />
+          <button
+            type="button"
+            className="h-11 rounded-full bg-[var(--primary)] text-white hover:bg-[var(--primary-focus)]"
+          >
+            Continue
+          </button>
+        </form>
+      </section>
+    </main>
   );
 }
